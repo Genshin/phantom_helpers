@@ -12,12 +12,12 @@ module GakuHelpers
       end
 
       def button(text, resource, options = {})
-        attributes = {:class => "btn mr-s"}.merge(options)
+        attributes = {:class => "btn btn-default"}.merge(options)
         link_to text, resource, attributes
       end
 
       def primary_button(text, resource, options = {})
-        attributes = {:class => "btn btn-primary mr-s"}.merge(options)
+        attributes = {:class => "btn btn-primary"}.merge(options)
         link_to text, resource, attributes
       end
 
@@ -29,25 +29,25 @@ module GakuHelpers
 
       def link_to_upload_image(resource, options = {})
         name = ("<i class='icon-camera'></i> " + t(:'gaku_helpers.picture.change')).html_safe
-        attributes = {:class => "btn span12 mr-s"}.merge(options)
+        attributes = {:class => "btn btn-default span12"}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_upload(options = {})
         text = ("<i class='icon-upload'></i> " + t(:'gaku_helpers.picture.upload')).html_safe
-        attributes = {:class => "btn span12 mr-s"}.merge(options)
+        attributes = {:class => "btn btn-default span12"}.merge(options)
         button_tag(content_tag('span', text), attributes)
       end
 
       def link_to_import(text, resource, options = {})
         name = ('<i class="icon-upload"></i> '+ text).html_safe
-        attributes = {:class => 'mr-s btn'}.merge(options)
+        attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_export(text, resource, options = {})
         name = ('<i class="icon-download"></i> '+ text).html_safe
-        attributes = {:class => 'mr-s btn'}.merge(options)
+        attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
 
@@ -56,7 +56,7 @@ module GakuHelpers
         name = ("<i class='icon-white icon-plus'></i> " + text).html_safe
         attributes = {
           :remote => true,
-          :class => "btn btn-primary mr-s"
+          :class => "btn btn-primary"
         }.merge(options)
         link_to name, resource, attributes
       end

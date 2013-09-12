@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.description = ''
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author            = 'Vassil Kalkov'
-  s.email             = 'vassilkalkov@gmail.com'
-  s.homepage          = 'http://kalkov.github.io'
+  s.author            = ['Vassil Kalkov', 'Rei Kagetsuki', 'Nakaya Yukiharu']
+  s.email             = 'info@genshin.org'
+  s.homepage          = 'http://github.com/Genshin/gaku_helpers'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {spec}/*`.split("\n")

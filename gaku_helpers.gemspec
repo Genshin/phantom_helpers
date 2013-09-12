@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = ''
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author            = ['Rei Kagetsuki', 'Nakaya Yukiharu', 'Vassil Kalkov']
+  s.author            = ['Vassil Kalkov', 'Rei Kagetsuki', 'Nakaya Yukiharu']
   s.email             = 'info@genshin.org'
   s.homepage          = 'http://github.com/Genshin/gaku_helpers'
 

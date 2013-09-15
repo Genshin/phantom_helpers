@@ -1,4 +1,4 @@
-module GakuHelpers
+module PhantomHelpers
   module ViewHelpers
     module ModalHelper
 
@@ -16,9 +16,11 @@ module GakuHelpers
 
       def modal_body(&block)
         content_tag :div, class: "modal-body" do
-          content_tag :div, class: "row-fluid" do
-            content_tag :div, class: "span12 well" do
-              block.call
+          content_tag :div, class: "row" do
+            content_tag :div, class: "col-md-12" do
+              content_tag :div, class: "well" do
+                block.call
+              end
             end
           end
         end

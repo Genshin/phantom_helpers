@@ -1,4 +1,4 @@
-module GakuHelpers
+module PhantomHelpers
   module ViewHelpers
     module LinkHelper
 
@@ -12,12 +12,12 @@ module GakuHelpers
       end
 
       def button(text, resource, options = {})
-        attributes = {:class => "btn mr-s"}.merge(options)
+        attributes = {:class => "btn btn-default"}.merge(options)
         link_to text, resource, attributes
       end
 
       def primary_button(text, resource, options = {})
-        attributes = {:class => "btn btn-primary mr-s"}.merge(options)
+        attributes = {:class => "btn btn-primary"}.merge(options)
         link_to text, resource, attributes
       end
 
@@ -28,26 +28,26 @@ module GakuHelpers
       end
 
       def link_to_upload_image(resource, options = {})
-        name = ("<i class='icon-camera'></i> " + t(:'gaku_helpers.picture.change')).html_safe
-        attributes = {:class => "btn span12 mr-s"}.merge(options)
+        name = ("<i class='icon-camera'></i> " + t(:'phantom_helpers.picture.change')).html_safe
+        attributes = {:class => "btn btn-default span12"}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_upload(options = {})
-        text = ("<i class='icon-upload'></i> " + t(:'gaku_helpers.picture.upload')).html_safe
-        attributes = {:class => "btn span12 mr-s"}.merge(options)
+        text = ("<i class='icon-upload'></i> " + t(:'phantom_helpers.picture.upload')).html_safe
+        attributes = {:class => "btn btn-default span12"}.merge(options)
         button_tag(content_tag('span', text), attributes)
       end
 
       def link_to_import(text, resource, options = {})
         name = ('<i class="icon-upload"></i> '+ text).html_safe
-        attributes = {:class => 'mr-s btn'}.merge(options)
+        attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_export(text, resource, options = {})
         name = ('<i class="icon-download"></i> '+ text).html_safe
-        attributes = {:class => 'mr-s btn'}.merge(options)
+        attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
 
@@ -56,7 +56,7 @@ module GakuHelpers
         name = ("<i class='icon-white icon-plus'></i> " + text).html_safe
         attributes = {
           :remote => true,
-          :class => "btn btn-primary mr-s"
+          :class => "btn btn-primary"
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -97,7 +97,7 @@ module GakuHelpers
         attributes = {
           :remote => true,
           :method => :delete,
-          :data => { :confirm => t(:'gaku_helpers.are_you_sure') },
+          :data => { :confirm => t(:'phantom_helpers.are_you_sure') },
           :class => 'btn btn-mini btn-danger delete-link'
         }.merge(options)
         link_to name, resource, attributes
@@ -115,7 +115,7 @@ module GakuHelpers
         name = ("<i class='icon-white icon-remove'></i>").html_safe
         attributes = {
           :remote => true,
-          :data => { :confirm => t(:'gaku_helpers.are_you_sure') },
+          :data => { :confirm => t(:'phantom_helpers.are_you_sure') },
           :class => 'btn btn-mini btn-danger delete-link'
         }.merge(options)
         link_to name, resource, attributes
@@ -130,7 +130,7 @@ module GakuHelpers
         attributes = {
           :remote => true,
           :method => :post,
-          :data => { :confirm => t(:'gaku_helpers.are_you_sure') },
+          :data => { :confirm => t(:'phantom_helpers.are_you_sure') },
         }.merge(options)
         link_to primary_checkbox, resource, attributes
       end
@@ -156,7 +156,7 @@ module GakuHelpers
 
       # Edit button with text "Edit" and pencil image
       def link_to_edit_with_text(resource, options = {})
-        name = ('<i class="icon-pencil"></i> '+t(:'gaku_helpers.edit')).html_safe
+        name = ('<i class="icon-pencil"></i> '+t(:'phantom_helpers.edit')).html_safe
         attributes = {:class => "span12 btn edit-link"}.merge(options)
         link_to name, resource, attributes
       end
@@ -185,7 +185,7 @@ module GakuHelpers
       end
 
       def link_to_cancel(options = {})
-        text = ('<i class="icon-white icon-ban-circle"></i> '+ t(:'gaku_helpers.cancel')).html_safe
+        text = ('<i class="icon-white icon-ban-circle"></i> '+ t(:'phantom_helpers.cancel')).html_safe
         attributes = {
           :class => "span6 btn btn-warning cancel-link",
           :'data-dismiss' => "modal"
@@ -194,7 +194,7 @@ module GakuHelpers
       end
 
       def link_to_modal_cancel(options = {})
-        name = t(:'gaku_helpers.cancel')
+        name = t(:'phantom_helpers.cancel')
         attributes = {
           :class => "span6 btn btn-warning modal-cancel-link",
           :'data-dismiss' => "modal"
@@ -203,7 +203,7 @@ module GakuHelpers
       end
 
       def ajax_link_to_back(resource, options = {})
-        name = ('<i class="icon-white icon-share-alt"></i> ' + t(:'gaku_helpers.back')).html_safe
+        name = ('<i class="icon-white icon-share-alt"></i> ' + t(:'phantom_helpers.back')).html_safe
         attributes = {
           :class => "span6 btn btn-warning back-link back-modal-link",
           :remote => true
@@ -213,7 +213,7 @@ module GakuHelpers
       end
 
       def link_to_back(resource, options = {})
-        name = ('<i class="icon-share-alt"></i> '+ t(:'gaku_helpers.back')).html_safe
+        name = ('<i class="icon-share-alt"></i> '+ t(:'phantom_helpers.back')).html_safe
         attributes = {
           :class => 'span6 btn back-link'
         }.merge(options)

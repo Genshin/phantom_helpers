@@ -215,7 +215,7 @@ module PhantomHelpers
       def link_to_back(resource, options = {})
         name = ('<i class="icon-share-alt"></i> '+ t(:'phantom_helpers.back')).html_safe
         attributes = {
-          :class => 'span6 btn back-link'
+          :class => 'col-md-6 btn back-link'
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -224,7 +224,7 @@ module PhantomHelpers
         text = ('<i class="icon-white icon-ok-circle"></i> '+ text).html_safe
         attributes = {
           :type => 'submit',
-          :class => 'span6 btn btn-primary button'
+          :class => 'col-md-6 btn btn-primary button'
         }.merge(options)
         button_tag(content_tag('span', text), attributes)
       end

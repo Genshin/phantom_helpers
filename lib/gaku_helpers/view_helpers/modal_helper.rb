@@ -1,4 +1,4 @@
-module GakuHelpers
+module PhantomHelpers
   module ViewHelpers
     module ModalHelper
 

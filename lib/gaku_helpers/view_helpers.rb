@@ -1,9 +1,9 @@
-require 'gaku_helpers/view_helpers/link_helper'
-require 'gaku_helpers/view_helpers/modal_helper'
-require 'gaku_helpers/view_helpers/table_helper'
-require 'gaku_helpers/view_helpers/html_helper'
+require 'phantom_helpers/view_helpers/link_helper'
+require 'phantom_helpers/view_helpers/modal_helper'
+require 'phantom_helpers/view_helpers/table_helper'
+require 'phantom_helpers/view_helpers/html_helper'
 
-module GakuHelpers
+module PhantomHelpers
   module ViewHelpers
     ActionView::Base.send :include, LinkHelper
     ActionView::Base.send :include, ModalHelper

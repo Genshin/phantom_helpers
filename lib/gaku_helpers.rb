@@ -1,1 +1,1 @@
-require 'gaku_helpers/railtie' if defined?(Rails::Railtie)
+require 'phantom_helpers/railtie' if defined?(Rails::Railtie)

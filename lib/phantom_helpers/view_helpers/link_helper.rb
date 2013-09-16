@@ -78,7 +78,7 @@ module PhantomHelpers
         name = content_tag(:i, nil, :class => 'glyphicon-repeat')
         attributes = {
           :remote => true,
-          :class => "mr-xs btn btn-xs btn-warning recovery-link"
+          :class => "btn btn-xs btn-warning recovery-link"
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -139,7 +139,7 @@ module PhantomHelpers
         name = ("<span class='glyphicon glyphicon-pencil'></span>").html_safe
         attributes = {
           :remote => true,
-          :class => "mr-xs btn btn-xs btn-warning edit-link"
+          :class => "btn btn-xs btn-warning edit-link"
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -149,7 +149,7 @@ module PhantomHelpers
       def link_to_edit(resource, options = {})
         name = ("<span class='glyphicon glyphicon-edit'></span>").html_safe
         attributes = {
-          :class => "mr-xs btn btn-xs btn-inverse edit-link",
+          :class => "btn btn-xs btn-inverse edit-link",
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -171,7 +171,7 @@ module PhantomHelpers
         name = ("<span class='glyphicon glyphicon-eye-open'></span>").html_safe
         attributes = {
           :remote => true,
-          :class => "mr-xs btn btn-xs btn-info show-link"
+          :class => "btn btn-xs btn-info show-link"
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -179,7 +179,7 @@ module PhantomHelpers
       def link_to_show(resource, options = {})
         name = ("<span class='glyphicon glyphicon-eye-open'></span>").html_safe
         attributes = {
-          :class => "mr-xs btn btn-xs btn-info show-link"
+          :class => "btn btn-xs btn-info show-link"
         }.merge(options)
         link_to name, resource, attributes
       end

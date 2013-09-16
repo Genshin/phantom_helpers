@@ -40,13 +40,13 @@ module PhantomHelpers
       end
 
       def link_to_import(text, resource, options = {})
-        name = ('<span class="glyphicon-upload"></span> '+ text).html_safe
+        name = ('<span class="glyphicon glyphicon-upload"></span> '+ text).html_safe
         attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_export(text, resource, options = {})
-        name = ('<span class="glyphicon-download"></span> '+ text).html_safe
+        name = ('<span class="glyphicon glyphicon-download"></span> '+ text).html_safe
         attributes = {:class => 'btn btn-default'}.merge(options)
         link_to name, resource, attributes
       end
@@ -156,13 +156,13 @@ module PhantomHelpers
 
       # Edit button with text "Edit" and pencil image
       def link_to_edit_with_text(resource, options = {})
-        name = ('<span class="glyphicon-pencil"></span> '+t(:'phantom_helpers.edit')).html_safe
+        name = ('<span class="glyphicon glyphicon-pencil"></span> '+t(:'phantom_helpers.edit')).html_safe
         attributes = {:class => "span12 btn edit-link"}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_edit_with_custom_text(text, resource, options = {})
-        name = ('<span class="glyphicon-pencil"></span> '+ text).html_safe
+        name = ('<span class="glyphicon glyphicon-pencil"></span> '+ text).html_safe
         attributes = {:class => "span12 btn edit-link"}.merge(options)
         link_to name, resource, attributes
       end
@@ -185,9 +185,9 @@ module PhantomHelpers
       end
 
       def link_to_cancel(options = {})
-        text = ('<span class="glyphicon-ban-circle"></span> '+ t(:'phantom_helpers.cancel')).html_safe
+        text = ('<span class="glyphicon glyphicon-ban-circle"></span> '+ t(:'phantom_helpers.cancel')).html_safe
         attributes = {
-          :class => "span6 btn btn-warning cancel-link",
+          :class => "col-md-6 btn btn-warning cancel-link",
           :'data-dismiss' => "modal"
         }.merge(options)
         link_to text, '#', attributes
@@ -196,16 +196,16 @@ module PhantomHelpers
       def link_to_modal_cancel(options = {})
         name = t(:'phantom_helpers.cancel')
         attributes = {
-          :class => "span6 btn btn-warning modal-cancel-link",
+          :class => "col-md-6 btn btn-warning modal-cancel-link",
           :'data-dismiss' => "modal"
         }.merge(options)
         link_to name, '#', attributes
       end
 
       def ajax_link_to_back(resource, options = {})
-        name = ('<span class="glyphicon-share-alt"></span> ' + t(:'phantom_helpers.back')).html_safe
+        name = ('<span class="glyphicon glyphicon-share-alt"></span> ' + t(:'phantom_helpers.back')).html_safe
         attributes = {
-          :class => "span6 btn btn-warning back-link back-modal-link",
+          :class => "col-md-6 btn btn-warning back-link back-modal-link",
           :remote => true
         }.merge(options)
 
@@ -213,7 +213,7 @@ module PhantomHelpers
       end
 
       def link_to_back(resource, options = {})
-        name = ('<span class="glyphicon-share-alt"></span> '+ t(:'phantom_helpers.back')).html_safe
+        name = ('<span class="glyphicon glyphicon-share-alt"></span> '+ t(:'phantom_helpers.back')).html_safe
         attributes = {
           :class => 'col-md-6 btn back-link'
         }.merge(options)
@@ -221,7 +221,7 @@ module PhantomHelpers
       end
 
       def submit_button(text, options={})
-        text = ('<span class="glyphicon-ok-circle"></span> '+ text).html_safe
+        text = ('<span class="glyphicon glyphicon-ok-circle"></span> '+ text).html_safe
         attributes = {
           :type => 'submit',
           :class => 'col-md-6 btn btn-primary button'

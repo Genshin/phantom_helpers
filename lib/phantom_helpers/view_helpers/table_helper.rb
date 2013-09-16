@@ -48,9 +48,9 @@ module PhantomHelpers
 
       def th_actions(num)
         size = case num
-        when 1 then 40
-        when 2 then 62
-        when 3 then 99
+        when 1 then 35
+        when 2 then 77
+        when 3 then 93
         else num
         end
         content_tag :th, class: "btn-inverse", style:"width:#{size}px" do

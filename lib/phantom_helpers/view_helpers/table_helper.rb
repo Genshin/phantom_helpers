@@ -31,7 +31,7 @@ module PhantomHelpers
       end
 
       def sortable_table_for(id, &block)
-        content_tag :table, class: "table table-striped table-bordered table-condensed tablesorter", id: id do
+        content_tag :table, class: "table table-striped table-bordered table-condensed", id: id do
           block.call
         end
       end
@@ -42,7 +42,7 @@ module PhantomHelpers
 
       def th_icon(icon)
         content_tag :th, class: "btn-inverse", style: "width:24px;" do
-          content_tag :i, nil,  class: "icon-#{icon} icon-white"
+          content_tag :span, nil,  class: "glyphglyphicon-#{icon}"
         end
       end
 
@@ -54,7 +54,7 @@ module PhantomHelpers
         else num
         end
         content_tag :th, class: "btn-inverse", style:"width:#{size}px" do
-          content_tag :i, nil,  class: "icon-edit icon-white"
+          content_tag :span, nil,  class: "glyphglyphicon-edit"
         end
       end
 

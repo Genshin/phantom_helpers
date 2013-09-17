@@ -35,7 +35,7 @@ module PhantomHelpers
 
       def link_to_upload(options = {})
         text = ("<span class='glyphicon glyphicon-upload'></span> " + t(:'phantom_helpers.picture.upload')).html_safe
-        attributes = {:class => "btn btn-default span12"}.merge(options)
+        attributes = {:class => "btn btn-default"}.merge(options)
         button_tag(content_tag('span', text), attributes)
       end
 
@@ -187,7 +187,7 @@ module PhantomHelpers
       def link_to_cancel(options = {})
         text = ('<span class="glyphicon glyphicon-ban-circle"></span> '+ t(:'phantom_helpers.cancel')).html_safe
         attributes = {
-          :class => "col-md-6 btn btn-warning cancel-link",
+          :class => "col-md-12 btn btn-warning cancel-link",
           :'data-dismiss' => "modal"
         }.merge(options)
         link_to text, '#', attributes
@@ -196,7 +196,7 @@ module PhantomHelpers
       def link_to_modal_cancel(options = {})
         name = t(:'phantom_helpers.cancel')
         attributes = {
-          :class => "col-md-6 btn btn-warning modal-cancel-link",
+          :class => "col-md-12 btn btn-warning modal-cancel-link",
           :'data-dismiss' => "modal"
         }.merge(options)
         link_to name, '#', attributes
@@ -224,7 +224,7 @@ module PhantomHelpers
         text = ('<span class="glyphicon glyphicon-ok-circle"></span> '+ text).html_safe
         attributes = {
           :type => 'submit',
-          :class => 'col-md-6 btn btn-primary button'
+          :class => 'col-md-12 btn btn-primary button'
         }.merge(options)
         button_tag(content_tag('span', text), attributes)
       end

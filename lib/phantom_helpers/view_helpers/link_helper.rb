@@ -224,7 +224,7 @@ module PhantomHelpers
         text = ('<span class="glyphicon glyphicon-ok-circle"></span> '+ text).html_safe
         attributes = {
           :type => 'submit',
-          :class => 'col-md-12 btn btn-primary button'
+          :class => 'col-md-12 btn btn-success button'
         }.merge(options)
         button_tag(content_tag('span', text), attributes)
       end

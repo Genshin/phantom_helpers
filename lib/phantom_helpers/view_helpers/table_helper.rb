@@ -18,7 +18,7 @@ module PhantomHelpers
 
       def show_table_for(id, &block)
         content_tag :div, class: "row" do
-          content_tag :table, class: "table table-hover  table-condensed", id: id do
+          content_tag :table, class: "table", id: id do
             block.call
           end
         end

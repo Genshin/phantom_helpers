@@ -4,8 +4,10 @@ module PhantomHelpers
 
       def table_for(id, &block)
         content_tag :div, class: "row" do
-          content_tag :table, class: "table table-striped table-bordered table-condensed", id: id do
-            block.call
+          content_tag :div, class: "col-md-12" do
+            content_tag :table, class: "table table-striped table-bordered table-condensed", id: id do
+              block.call
+            end
           end
         end
       end
@@ -18,8 +20,10 @@ module PhantomHelpers
 
       def show_table_for(id, &block)
         content_tag :div, class: "row" do
-          content_tag :table, class: "table", id: id do
-            block.call
+          content_tag :div, class: "col-md-12" do
+            content_tag :table, class: "table", id: id do
+              block.call
+            end
           end
         end
       end

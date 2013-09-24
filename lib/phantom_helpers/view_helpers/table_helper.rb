@@ -53,7 +53,7 @@ module PhantomHelpers
       def th_actions(num)
         size = case num
         when 1 then 35
-        when 2 then 77
+        when 2 then 64
         when 3 then 93
         else num
         end

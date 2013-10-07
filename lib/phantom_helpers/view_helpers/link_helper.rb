@@ -29,7 +29,7 @@ module PhantomHelpers
 
       def link_to_upload_image(resource, options = {})
         name = ("<span class='glyphicon glyphicon-camera'></span> " + t(:'phantom_helpers.picture.change')).html_safe
-        attributes = {:class => "btn btn-default span12"}.merge(options)
+        attributes = {:class => "btn btn-default col-md-12"}.merge(options)
         link_to name, resource, attributes
       end
 
@@ -106,7 +106,7 @@ module PhantomHelpers
       def link_to_modal_delete(resource, options = {})
         name = ("<span class='glyphicon glyphicon-trash'></span>").html_safe
         attributes = {
-          :class => 'btn btn-danger modal-delete-link span12'
+          :class => 'btn btn-danger modal-delete-link col-md-12'
         }.merge(options)
         link_to name, resource, attributes
       end
@@ -157,13 +157,13 @@ module PhantomHelpers
       # Edit button with text "Edit" and pencil image
       def link_to_edit_with_text(resource, options = {})
         name = ('<span class="glyphicon glyphicon-pencil"></span> '+t(:'phantom_helpers.edit')).html_safe
-        attributes = {:class => "span12 btn edit-link"}.merge(options)
+        attributes = {:class => "col-md-12 btn edit-link"}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_edit_with_custom_text(text, resource, options = {})
         name = ('<span class="glyphicon glyphicon-pencil"></span> '+ text).html_safe
-        attributes = {:class => "span12 btn edit-link"}.merge(options)
+        attributes = {:class => "col-md-12 btn edit-link"}.merge(options)
         link_to name, resource, attributes
       end
 
@@ -215,7 +215,7 @@ module PhantomHelpers
       def link_to_back(resource, options = {})
         name = ('<span class="glyphicon glyphicon-share-alt"></span> '+ t(:'phantom_helpers.back')).html_safe
         attributes = {
-          :class => 'col-md-6 btn back-link'
+          :class => 'col-md-12 btn btn-default back-link'
         }.merge(options)
         link_to name, resource, attributes
       end

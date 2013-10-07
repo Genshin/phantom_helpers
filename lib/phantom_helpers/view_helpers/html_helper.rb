@@ -56,7 +56,9 @@ module PhantomHelpers
 
       def index_header(&block)
         content_tag :div, class: "row" do
-          block.call
+          content_tag :div, class: "col-md-12" do
+            block.call
+          end
         end
       end
 

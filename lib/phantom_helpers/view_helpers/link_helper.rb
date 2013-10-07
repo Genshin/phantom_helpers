@@ -157,13 +157,13 @@ module PhantomHelpers
       # Edit button with text "Edit" and pencil image
       def link_to_edit_with_text(resource, options = {})
         name = ('<span class="glyphicon glyphicon-pencil"></span> '+t(:'phantom_helpers.edit')).html_safe
-        attributes = {:class => "col-md-12 btn edit-link"}.merge(options)
+        attributes = {:class => "col-md-12 btn btn-warning edit-link"}.merge(options)
         link_to name, resource, attributes
       end
 
       def link_to_edit_with_custom_text(text, resource, options = {})
         name = ('<span class="glyphicon glyphicon-pencil"></span> '+ text).html_safe
-        attributes = {:class => "col-md-12 btn edit-link"}.merge(options)
+        attributes = {:class => "col-md-12 btn btn-warning edit-link"}.merge(options)
         link_to name, resource, attributes
       end
 
@@ -205,7 +205,7 @@ module PhantomHelpers
       def ajax_link_to_back(resource, options = {})
         name = ('<span class="glyphicon glyphicon-share-alt"></span> ' + t(:'phantom_helpers.back')).html_safe
         attributes = {
-          :class => "col-md-6 btn btn-warning back-link back-modal-link",
+          :class => "col-md-12 btn btn-warning back-link back-modal-link",
           :remote => true
         }.merge(options)
 

@@ -139,11 +139,10 @@ module PhantomHelpers
         name = ("<span class='glyphicon glyphicon-pencil'></span>").html_safe
         attributes = {
           :remote => true,
-          :class => "btn btn-xs btn-warning edit-link"
+          :class => "btn btn-xs btn-warning js-edit-link"
         }.merge(options)
         link_to name, resource, attributes
       end
-
 
       # Edit button with only pencil image - without text
       def link_to_edit(resource, options = {})

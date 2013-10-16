@@ -115,6 +115,7 @@ module PhantomHelpers
         name = ("<span class='glyphicon glyphicon-remove'></span>").html_safe
         attributes = {
           :remote => true,
+          :method => :patch,
           :data => { :confirm => t(:'phantom_helpers.are_you_sure') },
           :class => 'btn btn-xs btn-danger delete-link'
         }.merge(options)

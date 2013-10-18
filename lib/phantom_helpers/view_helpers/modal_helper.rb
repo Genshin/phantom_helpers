@@ -2,39 +2,16 @@ module PhantomHelpers
   module ViewHelpers
     module ModalHelper
 
-      def close_button
-        content_tag :button, :class => 'close', :'data-dismiss' => 'modal' do
-          "&times".html_safe
-        end
-      end
-
       def modal_for(id, &block)
         content_tag :div, class: "modal hide", id: id, wmode: "opaque" do
           block.call
         end
       end
 
-      def modal_body(&block)
-        content_tag :div, class: "modal-body" do
-          content_tag :div, class: "row" do
-            content_tag :div, class: "col-md-12" do
-              content_tag :div, class: "well" do
-                block.call
-              end
-            end
-          end
+      def modal_close_button
+        content_tag :button, :class => 'close', :'data-dismiss' => 'modal', :'aria-hidden' => true do
+          "&times".html_safe
         end
-      end
-
-      def modal_header(text)
-        content_tag :div, class: "modal-header" do
-          concat close_button
-          concat content_tag(:h3) { text }
-        end
-      end
-
-      def modal_form_error(id)
-        content_tag :div, nil, :id => id
       end
 
     end

@@ -7,4 +7,6 @@ en:
       upload: "Upload picture"
     are_you_sure: "Are you sure?"
     edit: "Edit"
+    delete: Delete
+    confirm_delete: "Confirm delete?"
 

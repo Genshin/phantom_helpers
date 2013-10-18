@@ -92,6 +92,15 @@ module PhantomHelpers
         link_to name, resource, attributes
       end
 
+      def link_to_delete_with_text(resource, options = {})
+        attributes = {
+          :method => :delete,
+          :data => {confirm: t(:'phantom_helpers.confirm_delete')},
+          :class => 'btn btn-danger'
+        }.merge(options)
+        link_to t(:'phantom_helpers.delete'), resource, attributes
+      end
+
       def ajax_link_to_delete(resource, options = {})
         name = ("<span class='glyphicon glyphicon-remove'></span>").html_safe
         attributes = {
@@ -121,7 +130,6 @@ module PhantomHelpers
         }.merge(options)
         link_to name, resource, attributes
       end
-
 
       def primary_checkbox
         ("<span class='glyphicon glyphicon-ok'></span>").html_safe

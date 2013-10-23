@@ -24,7 +24,7 @@ module PhantomHelpers
         content_tag :div, class: "row" do
           content_tag :div, class: "col-md-12" do
             content_tag :div, class: "panel panel-#{color}" do
-              
+
               case type
               when "default"
                 [
@@ -72,7 +72,7 @@ module PhantomHelpers
           end
         end
       end
-      
+
       def index_body(&block)
         content_tag :div, class: "row" do
           content_tag :div, class: "col-md-12" do
@@ -82,11 +82,15 @@ module PhantomHelpers
       end
 
       def index_header(&block)
-        content_tag :div, class: "row" do
+        content_tag :div, class: "row index-header" do
           content_tag :div, class: "col-md-12" do
             block.call
           end
         end
+      end
+
+      def footer(&block)
+        content_tag(:div, class: "row mt-l") { block.call }
       end
 
     end

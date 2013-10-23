@@ -2,6 +2,10 @@ en:
   phantom_helpers:
     cancel: "Cancel"
     back: "Back"
+    index: Index
+    report: Generate Report
+    updated: updated
+    ago: ago
     picture:
       change: "Change picture"
       upload: "Upload picture"

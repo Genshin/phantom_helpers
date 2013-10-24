@@ -92,6 +92,25 @@ module PhantomHelpers
         link_to name, resource, attributes
       end
 
+      def link_to_delete_with_text(resource, options = {})
+        attributes = {
+          :method => :delete,
+          :data => {confirm: t(:'phantom_helpers.confirm_delete')},
+          :class => 'btn btn-danger'
+        }.merge(options)
+        link_to t(:'phantom_helpers.delete'), resource, attributes
+      end
+
+
+      def link_to_soft_delete_with_text(resource, options = {})
+        attributes = {
+          :method => :patch,
+          :data => {confirm: t(:'phantom_helpers.confirm_delete')},
+          :class => 'btn btn-danger'
+        }.merge(options)
+        link_to t(:'phantom_helpers.delete'), resource, attributes
+      end
+
       def ajax_link_to_delete(resource, options = {})
         name = ("<span class='glyphicon glyphicon-remove'></span>").html_safe
         attributes = {
@@ -103,12 +122,13 @@ module PhantomHelpers
         link_to name, resource, attributes
       end
 
-      def link_to_modal_delete(resource, options = {})
+      def link_to_modal_delete(options = {})
         name = ("<span class='glyphicon glyphicon-trash'></span>").html_safe
         attributes = {
-          :class => 'btn btn-danger modal-delete-link col-md-12'
+          :class => 'btn btn-danger modal-delete-link col-md-12',
+          :data => {:confirm => nil}
         }.merge(options)
-        link_to name, resource, attributes
+        link_to name, nil, attributes
       end
 
       def ajax_soft_delete(resource, options = {})
@@ -121,7 +141,6 @@ module PhantomHelpers
         }.merge(options)
         link_to name, resource, attributes
       end
-
 
       def primary_checkbox
         ("<span class='glyphicon glyphicon-ok'></span>").html_safe
@@ -216,6 +235,22 @@ module PhantomHelpers
         name = ('<span class="glyphicon glyphicon-share-alt"></span> '+ t(:'phantom_helpers.back')).html_safe
         attributes = {
           :class => 'col-md-12 btn btn-default back-link'
+        }.merge(options)
+        link_to name, resource, attributes
+      end
+
+      def link_to_index(resource, options = {})
+        name = ('<span class="glyphicon glyphicon-share-alt"></span> '+ t(:'phantom_helpers.index')).html_safe
+        attributes = {
+          :class => 'col-md-12 btn btn-default index-link'
+        }.merge(options)
+        link_to name, resource, attributes
+      end
+
+      def link_to_report(resource, options = {})
+        name = ('<span class="glyphicon glyphicon-download-alt"></span> '+ t(:'phantom_helpers.report')).html_safe
+        attributes = {
+          :class => 'col-md-12 btn btn-default report-link'
         }.merge(options)
         link_to name, resource, attributes
       end

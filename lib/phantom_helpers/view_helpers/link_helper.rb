@@ -74,15 +74,6 @@ module PhantomHelpers
         button_tag(content_tag('span', text), attributes)
       end
 
-      def ajax_link_to_recovery(resource, options = {})
-        name = content_tag(:i, nil, :class => 'glyphicon-repeat')
-        attributes = {
-          :remote => true,
-          :class => "btn btn-xs btn-warning recovery-link"
-        }.merge(options)
-        link_to name, resource, attributes
-      end
-
       def link_to_delete(resource, options = {})
         name = ("<span class='glyphicon glyphicon-remove'></span>").html_safe
         attributes = {
@@ -251,6 +242,23 @@ module PhantomHelpers
         name = ('<span class="glyphicon glyphicon-download-alt"></span> '+ t(:'phantom_helpers.report')).html_safe
         attributes = {
           :class => 'col-md-12 btn btn-default report-link'
+        }.merge(options)
+        link_to name, resource, attributes
+      end
+
+      def link_to_download(resource, options = {})
+        name = content_tag(:span, nil, class: 'glyphicon glyphicon-download')
+        attributes = {
+          class: "btn btn-xs btn-success download-link"
+        }.merge(options)
+        link_to name, resource, attributes
+      end
+
+      def ajax_link_to_recovery(resource, options = {})
+        name = content_tag(:span, nil, class: 'glyphicon glyphicon-repeat')
+        attributes = {
+          remote: true,
+          class: "btn btn-xs btn-success recovery-link"
         }.merge(options)
         link_to name, resource, attributes
       end

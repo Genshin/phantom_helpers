@@ -2,10 +2,10 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'phantom_helpers'
-  s.version     = '0.11.0.alpha1'
+  s.version     = '0.11.0.alpha2'
   s.summary     = 'Phantom View Helpers'
   s.description = 'rails helpers for bootstrap 3'
-  s.licenses = ['GNU GPL-3', 'AGPL-3']
+  s.licenses    = ['GNU GPL-3', 'AGPL-3']
   s.required_ruby_version = '>= 1.8.7'
 
   s.author            = ['Vassil Kalkov', 'Rei Kagetsuki', 'Nakaya Yukiharu']

@@ -20,7 +20,7 @@ module PhantomHelpers
       end
 
       def modal_for(id, &block)
-        content_tag :div, class: "modal hide", id: id, wmode: "opaque" do
+        content_tag :div, class: "modal d-none", id: id, wmode: "opaque" do
           content_tag :div, class: "col-md-12 alert-dismissable" do
             block.call
           end
@@ -28,7 +28,7 @@ module PhantomHelpers
       end
 
       def index_modal_for(id, &block)
-        content_tag :div, class: "modal hide", id: id, wmode: "opaque" do
+        content_tag :div, class: "modal d-none", id: id, wmode: "opaque" do
           content_tag :div, class: "col-md-12 alert-dismissable" do
             content_tag :div, class: "panel panel-primary" do
               block.call

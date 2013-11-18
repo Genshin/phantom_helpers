@@ -37,7 +37,6 @@ module PhantomHelpers
         end
       end
 
-
       def modal_body(&block)
         content_tag(:div, class: "panel-body") do
           block.call
@@ -58,7 +57,6 @@ module PhantomHelpers
           end
         end
       end
-
 
       def modal_close_button
         content_tag :button, :class => 'close', :'data-dismiss' => 'modal', :'aria-hidden' => true do

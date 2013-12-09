@@ -62,6 +62,12 @@ module PhantomHelpers
         end
       end
 
+      def tr_for(resource, &block)
+        content_tag :tr, id: "#{resource.class.to_s.demodulize.underscore.dasherize}-#{resource.id}" do
+          block.call
+        end
+      end
+
     end
   end
 end

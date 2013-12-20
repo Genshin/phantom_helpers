@@ -16,6 +16,9 @@ module PhantomHelpers
         content_tag :div, nil, style: "width:100px;height:20px;background-color:#{color}"
       end
 
+      def datepicker_date_format(date)
+        date ?  date.strftime('%Y-%m-%d') : Time.now.strftime('%Y-%m-%d')
+      end
 
       def comma_separated_list(objects, &block)
         if objects.any?

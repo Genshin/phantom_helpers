@@ -2,6 +2,12 @@ module PhantomHelpers
   module ViewHelpers
     module HtmlHelper
 
+      def title(text)
+        content_for(:title) do
+          text
+        end
+      end
+
       def hr
         content_tag :div, class: "row" do
           content_tag :div, class: "col-md-12" do

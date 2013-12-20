@@ -8,6 +8,7 @@ require 'phantom_helpers/view_helpers/link_helper'
 require 'phantom_helpers/view_helpers/modal_helper'
 require 'phantom_helpers/view_helpers/sort_helper'
 require 'phantom_helpers/view_helpers/table_helper'
+require 'phantom_helpers/view_helpers/flash_helper'
 
 module PhantomHelpers
   module ViewHelpers
@@ -21,5 +22,6 @@ module PhantomHelpers
     ActionView::Base.send :include, ModalHelper
     ActionView::Base.send :include, SortHelper
     ActionView::Base.send :include, TableHelper
+    ActionView::Base.send :include, FlashHelper
   end
 end

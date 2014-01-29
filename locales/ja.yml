@@ -2,9 +2,14 @@ ja:
   phantom_helpers:
     cancel: "キャンセル"
     back: "戻る"
+    index: "インデックス"
+    report: "レポート生成"
+    updated: "最終更新"
+    ago: "前"
     picture:
       change: "画像を変更"
       upload: "画像をアップロード"
     are_you_sure: "これで宜しいですか?"
     edit: "編集"
-
+    delete: "削除"
+    confirm_delete: "削除しますか？"

@@ -45,7 +45,7 @@ module PhantomHelpers
       end
 
       def th_icon(icon)
-        content_tag :th, class: "btn-inverse", style: "width:24px;" do
+        content_tag :th, class: "btn-inverse", style: "width:34px;" do
           content_tag :span, nil,  class: "glyphicon glyphicon-#{icon}"
         end
       end
